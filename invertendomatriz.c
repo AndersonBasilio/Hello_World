@@ -1,17 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void desenhaBorda(){
+    printf("------------------------------------------------------------");
+}
 
 int main(){
     
-   int matriz[2][2], i, j, aux1, aux2;
+   int matriz[3][3], i, j, aux1, aux2;
 
         for(i = 0; i < 2; i++){
             for(j = 0; j < 2; j++){
                 printf("Digite o valor para [%d][%d]: ", i, j);
                 scanf("%d", &matriz[i][j]);
             }
-        }
+        }       
+                desenhaBorda();
+                printf("\nImprimindo os valores normais da matriz na tela...\n");
                 for(i = 0; i < 2; i++){
                     for(j = 0; j < 2; j++){
                         printf("[%d] ", matriz[i][j]);
@@ -19,6 +24,7 @@ int main(){
                     printf("\n");
                 }
 
+                desenhaBorda();
                     printf("\nInvertendo valores da Matriz...\n");
 
                     aux1 = matriz[0][0];
@@ -35,7 +41,7 @@ int main(){
                         printf("[%d] ", matriz[i][j]);
                     }
                     printf("\n");
-              }
+              }desenhaBorda();
 
 
 
